@@ -12,8 +12,8 @@ CartController
 
 
 This will use
-1. Dynamo db
+1. Dynamo db - right now uses H2 in memory db
 2. spring boot - starter, test, data and security
 3. spring security - implemented basic auth
-4. kinesis
-5. docker and k8s - created docker image and run
+4. kinesis - not implemenyed yet
+5. docker and k8s - created docker image and ran on minikube
