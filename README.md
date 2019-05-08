@@ -17,3 +17,8 @@ This will use
 3. spring security - implemented basic auth
 4. kinesis - not implemenyed yet
 5. docker and k8s - created docker image and ran on minikube
+6. Used Spring RestDoc to give documentation of endpoints
+8. dynamic configuration beans
+
+7. WIP - kafka integration
+9. security to use user, roles and privileges and other authentication mechanism/ redirect url after login/ method level security

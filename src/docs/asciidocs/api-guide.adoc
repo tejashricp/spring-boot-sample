@@ -17,7 +17,7 @@ include::{snippets}/when_add-item-to-store_it_should_return_status_-created/http
 
 include::{snippets}/when_add-item-to-store_it_should_return_status_-created/curl-request.adoc[]
 
-==Example request body
+=== Example request body
 include::{snippets}/when_add-item-to-store_it_should_return_status_-created/request-body.adoc[]
 
 ==== Example response

@@ -27,7 +27,6 @@ import static org.springframework.restdocs.operation.preprocess.Preprocessors.*;
 @RunWith(SpringRunner.class)
 public abstract class AbstractTest {
 
-    //mockmvc gets set up on its own
     @Autowired
     private WebApplicationContext context;
 
