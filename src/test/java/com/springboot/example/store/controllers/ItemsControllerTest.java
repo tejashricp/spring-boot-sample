@@ -24,7 +24,7 @@ public class ItemsControllerTest extends AbstractTest{
     ItemService itemService;
 
 
-    @Ignore
+//    @Ignore
     @Test
     public void when_getAllItem_it_should_return_status_OK() throws Exception {
         String uri = "/items";
@@ -40,7 +40,7 @@ public class ItemsControllerTest extends AbstractTest{
         assertTrue(itemlist.size() > 0);
     }
 
-    @Ignore
+//    @Ignore
     @Test
     public void when_getAnItemById_it_should_return_status_OK() throws Exception {
         String uri = "/items/4";
@@ -56,7 +56,7 @@ public class ItemsControllerTest extends AbstractTest{
         assertNotNull(item);
     }
 
-    @Ignore
+//    @Ignore
     @Test
     public void when_addItemToStore_it_should_return_status_Created() throws Exception {
         Item item = new Item("name1",1234,224,"book");
@@ -71,7 +71,7 @@ public class ItemsControllerTest extends AbstractTest{
         assertEquals(201, status);
     }
 
-    @Ignore
+//    @Ignore
     @Test
     public void when_deleteItemInStore_it_should_return_No_Content() throws Exception {
         long id = 123;

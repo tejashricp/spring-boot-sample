@@ -1,0 +1,53 @@
+= Metadata Service API Guide
+Metadata service also known as config service. It hold the metadata/config required across different services.;
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 4
+:sectlinks:
+
+[[resources-add-item-to-store]]
+== Adding an item to store
+
+A `POST` request used to add item to store
+
+==== Example request
+include::{snippets}/when_add-item-to-store_it_should_return_status_-created/http-request.adoc[]
+
+include::{snippets}/when_add-item-to-store_it_should_return_status_-created/curl-request.adoc[]
+
+==Example request body
+include::{snippets}/when_add-item-to-store_it_should_return_status_-created/request-body.adoc[]
+
+==== Example response
+include::{snippets}/when_add-item-to-store_it_should_return_status_-created/http-response.adoc[]
+
+
+[[resources-delete-item-to-store]]
+== Deleting an item to store
+
+A `DELETE` request used to delete item to store
+
+==== Example request
+include::{snippets}/when_delete-item-in-store_it_should_return_-no_-content/http-request.adoc[]
+
+include::{snippets}/when_delete-item-in-store_it_should_return_-no_-content/curl-request.adoc[]
+
+
+==== Example response
+include::{snippets}/when_delete-item-in-store_it_should_return_-no_-content/http-response.adoc[]
+
+[[get-all-item-in-store]]
+== Getting all items in store
+
+A `GET` request used to delete item to store
+
+==== Example request
+include::{snippets}/when_get-all-item_it_should_return_status_-o-k/http-request.adoc[]
+
+include::{snippets}/when_get-all-item_it_should_return_status_-o-k/curl-request.adoc[]
+
+
+==== Example response
+include::{snippets}/when_get-all-item_it_should_return_status_-o-k/http-response.adoc[]
