@@ -40,6 +40,7 @@ public class ItemsControllerTest extends AbstractTest{
         String content = mvcResult.getResponse().getContentAsString();
         List<Item> itemlist = this.mapFromJson(content, List.class);
         assertTrue(itemlist.size() > 0);
+        verify(itemService, times(1)).findAllItems();
     }
 
 //    @Ignore
@@ -57,6 +58,7 @@ public class ItemsControllerTest extends AbstractTest{
         String content = mvcResult.getResponse().getContentAsString();
         Item item = this.mapFromJson(content, Item.class);
         assertNotNull(item);
+        verify(itemService, times(1)).findItemById(isA(Long.class));
     }
 
 //    @Ignore
@@ -72,6 +74,7 @@ public class ItemsControllerTest extends AbstractTest{
 
         int status = mvcResult.getResponse().getStatus();
         assertEquals(201, status);
+        verify(itemService, times(1)).addItem(isA(Item.class));
     }
 
 //    @Ignore
@@ -86,5 +89,6 @@ public class ItemsControllerTest extends AbstractTest{
 
         int status = mvcResult.getResponse().getStatus();
         assertEquals(204, status);
+        verify(itemService, times(1)).removeItem(isA(Long.class));
     }
 }
