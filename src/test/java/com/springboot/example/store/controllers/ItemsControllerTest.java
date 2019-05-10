@@ -29,7 +29,7 @@ public class ItemsControllerTest extends AbstractTest{
     @Test
     public void when_getAllItem_it_should_return_status_OK() throws Exception {
         String uri = "/items";
-        Item item1 = new ItemBuilder().category("bag").id(1).name("Widcraft").price(123).price(12332).build();
+        Item item1 = new ItemBuilder().category("bag").id(1).name("Widcraft").quantity(123).price(12332).build();
         when(itemService.findAllItems()).thenReturn(Arrays.asList(item1));
 
         MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.get(uri)
@@ -46,7 +46,7 @@ public class ItemsControllerTest extends AbstractTest{
     @Test
     public void when_getAnItemById_it_should_return_status_OK() throws Exception {
         String uri = "/items/4";
-        Item item1 = new ItemBuilder().category("bag").id(1).name("Widcraft").price(123).price(12332).build();
+        Item item1 = new ItemBuilder().category("bag").id(1).name("Widcraft").quantity(123).price(12332).build();
         when(itemService.findItemById(isA(Long.class))).thenReturn(Optional.of(item1));
 
         MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.get(uri)
@@ -62,7 +62,7 @@ public class ItemsControllerTest extends AbstractTest{
 //    @Ignore
     @Test
     public void when_addItemToStore_it_should_return_status_Created() throws Exception {
-        Item item1 = new ItemBuilder().category("bag").id(1).name("Widcraft").price(123).price(12332).build();
+        Item item1 = new ItemBuilder().category("bag").id(1).name("Widcraft").quantity(123).price(12332).build();
         String uri = "/items";
         when(itemService.addItem(isA(Item.class))).thenReturn(item1);
 
